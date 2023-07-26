@@ -34,3 +34,9 @@ app.get("/dogs/:id", (req, res) => {
     res.json(dogs[parseInt(req.params.id)- 1])
 })
 
+app.post("/dogs", (req, res) => {
+  console.log(req.body);
+  res.json({message: "ok"})
+})
+
+
