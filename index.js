@@ -17,12 +17,7 @@ const dogs = [
   { id: 5,name: "Perry",breed: "german Shaphard"},
 ]
 
-const about = [
-  {
-    name: "Bull Dog",
-    attr: "Dangerous"
-  }
-]
+
 
 app.get("/dogs", (req, res) => {
     res.send(dogs)
