@@ -1,7 +1,15 @@
 
 const express = require("express");
+var bodyParser = require('body-parser')
 const app = express()
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 
+// app.use(function (req, res) {
+//   res.setHeader('Content-Type', 'text/plain')
+//   res.write('you posted:\n')
+//   res.end(JSON.stringify(req.body, null, 2))
+// })
 const port = 4996
 
 app.listen(port, () => {
@@ -25,3 +33,4 @@ app.get("/dogs", (req, res) => {
 app.get("/dogs/:id", (req, res) => {
     res.json(dogs[parseInt(req.params.id)- 1])
 })
+
