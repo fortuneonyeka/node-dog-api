@@ -45,3 +45,7 @@ app.put("/dogs/:id", (req, res) => {
   res.json({message: `modified dog with the id ${req.params.id}`})
 })
 
+app.delete("/dogs/:id", (req, res) => {
+  console.log(req.body);
+  res.json({message: `deleted dog with the id ${req.params.id}`})
+})
