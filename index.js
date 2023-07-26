@@ -40,3 +40,8 @@ app.post("/dogs", (req, res) => {
 })
 
 
+app.put("/dogs/:id", (req, res) => {
+  console.log(req.body);
+  res.json({message: `modified dog with the id ${req.params.id}`})
+})
+
